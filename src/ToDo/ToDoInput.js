@@ -16,6 +16,10 @@ class ToDoInput extends React.Component {
         e.preventDefault();
         this.props.onSubmit(this.state.todoText);
         console.log("i'm in forms:", this.state.todoText);
+        this.setState({
+            todoText: ''
+        });
+        console.log(e.target);
     }
 
     render() {
