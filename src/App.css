@@ -1,38 +1,53 @@
-.App {
+
+.App{
+  width:40%;
+  border: 1px solid #eee;
+  margin: 20px auto;
+  background-color: rgb(3, 3, 37);
+}
+
+.Heading{
+  font-size: medium;
+  color:#eee;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.inputs{
+  width:60%;
+  background-color: rgb(123, 123, 158);
+  padding:30px;
+  margin:20px auto;  
+}
+input{
+  height:30px;
+  width:90%;
+  display:block;
+  border: 1px solid rgb(99, 99, 99);
+  padding:5px;
+  margin:auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todoItem{
+  width:60%;
+  background-color: rgb(62, 3, 65);
+  display:block;
+  border:1px solid rgb(22, 10, 20);
+  box-shadow: 0px 2px 2px rgb(121, 69, 115);
+  margin:20px auto;
+  padding:5px 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.inputText{
+  width:90%;
+  color:rgb(233, 233, 233);
+  text-align: left;
+  display: inline-block;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+i{  
+  position:absolute;
+  color:rgb(187, 27, 59);
+  margin:10px 5px;
+  padding: 5px;
+  float:right;
 }

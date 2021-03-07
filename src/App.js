@@ -1,25 +1,47 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import ToDoDisplay from './ToDo/ToDoDisplay';
+import ToDoInput from './ToDo/ToDoInput';
 
-function App() {
+
+
+function ItemToDisplay(props) {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    props.listItem.map(item => <ToDoDisplay item={item} key={item.index} />)
   );
+
+
+}
+
+
+class App extends React.Component {
+
+  state = {
+    todoItem: [],
+
+  }
+
+  onSubmitHandler = (Text) => {
+
+    console.log("i'm", Text);
+    this.setState(
+      prevState => ({ todoItem: [...prevState.todoItem, Text] }),
+    );
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <div className="Heading">
+          <h1>To Do List</h1>
+        </div>
+        <ToDoInput onSubmit={this.onSubmitHandler} />
+        <ItemToDisplay listItem={this.state.todoItem} />
+
+      </div>
+    );
+  }
 }
 
 export default App;
