@@ -26,7 +26,9 @@ class ToDoInput extends React.Component {
         return (
             <div className="inputs">
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text"
+                    <input
+                        className="inputbox"
+                        type="text"
                         placeholder="To Do item..."
                         onChange={(e) => this.changeHandler(e)}
                         value={this.state.todoText} />

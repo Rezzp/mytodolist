@@ -1,13 +1,31 @@
 import React from 'react';
 
-function ToDoDisplay(props) {
+class ToDoDisplay extends React.Component {
 
-    return (
-        <div className="todoItem">
-            <p className="inputText">{props.item}</p>
-            <i className="material-icons">delete</i>
+    state = { isCheckedBox: true }
 
-        </div>
-    );
-}
+    onClickHandler = () => {
+        this.setState(prevState => ({
+
+            isCheckedBox: !prevState.isCheckedBox
+        }));
+        console.log(this.state.isCheckedBox);
+    }
+
+    render() {
+        return (
+            <div className="todoItem">
+                <input
+                    className="chkbox"
+                    type="checkbox"
+                    onChange={this.onClickHandler}
+                />
+                <p className={this.state.isCheckedBox ? "inputText" : "notChkbox"}> {this.props.item}</p>
+                <i className="material-icons">delete</i>
+
+            </div>
+        );
+    }
+};
+
 export default ToDoDisplay;

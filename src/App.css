@@ -18,7 +18,8 @@
   padding:15px;
   margin:20px auto;  
 }
-input{
+
+.inputbox{
   height:30px;
   width:90%;
   display:block;
@@ -26,6 +27,7 @@ input{
   padding:5px;
   margin:auto;
 }
+
 
 .todoItem{
   width:60%;
@@ -37,11 +39,27 @@ input{
   padding:5px 15px;
 }
 
-.inputText{
-  width:90%;
+.chkbox{
+   display:inline;
+   padding-right: 5px;
+}
+
+.notChkbox{
+  width:85%;
   color:rgb(233, 233, 233);
   text-align: left;
   display: inline-block;
+  text-decoration: line-through;
+  padding-left: 6px; 
+
+}
+
+.inputText{
+  width:85%;
+  color:rgb(233, 233, 233);
+  text-align: left;
+  display: inline-block;
+  padding-left: 6px;  
 }
 
 i{  
