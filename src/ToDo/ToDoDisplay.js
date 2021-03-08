@@ -5,11 +5,9 @@ class ToDoDisplay extends React.Component {
     state = { isCheckedBox: true }
 
     onClickHandler = () => {
-        this.setState(prevState => ({
-
-            isCheckedBox: !prevState.isCheckedBox
-        }));
+        this.setState(prevState => ({ isCheckedBox: !prevState.isCheckedBox }));
         console.log(this.state.isCheckedBox);
+        console.log("displayColor", this.props.bgColor);
     }
 
     render() {

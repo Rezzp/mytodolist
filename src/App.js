@@ -6,12 +6,9 @@ import ToDoInput from './ToDo/ToDoInput';
 
 
 function ItemToDisplay(props) {
-
   return (
     props.listItem.map(item => <ToDoDisplay item={item} key={item.index} />)
   );
-
-
 }
 
 
@@ -19,15 +16,16 @@ class App extends React.Component {
 
   state = {
     todoItem: [],
-
+    //changeColor: false
   }
 
   onSubmitHandler = (Text) => {
 
     console.log("i'm", Text);
-    this.setState(
-      prevState => ({ todoItem: [...prevState.todoItem, Text] }),
-    );
+    console.log("i'm color", this.state.changeColor);
+    this.setState(prevState => ({ todoItem: [...prevState.todoItem, Text] }),);
+    //this.setState(prevState => ({ changeColor: !prevState.changeColor }),);
+    console.log("i'm new color", this.state.changeColor)
   }
 
   render() {
@@ -37,7 +35,7 @@ class App extends React.Component {
           <h1>To Do List</h1>
         </div>
         <ToDoInput onSubmit={this.onSubmitHandler} />
-        <ItemToDisplay listItem={this.state.todoItem} />
+        <ItemToDisplay listItem={this.state.todoItem} bgColor={this.state.changeColor} />
 
       </div>
     );

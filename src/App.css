@@ -1,9 +1,11 @@
 
 .App{
-  width:40%;
+  width:30%;
   border: 1px solid #eee;
   margin: 20px auto;
   background-color: rgb(3, 3, 37);
+  padding:30px;
+  border-radius: 3px;
 }
 
 .Heading{
@@ -13,7 +15,7 @@
 }
 
 .inputs{
-  width:60%;
+  width:70%;
   background-color: rgb(123, 123, 158);
   padding:15px;
   margin:20px auto;  
@@ -30,13 +32,21 @@
 
 
 .todoItem{
-  width:60%;
+  width:70%;
   background-color: rgb(62, 3, 65);
   display:block;
   border:1px solid rgb(22, 10, 20);
   box-shadow: 0px 2px 2px rgb(121, 69, 115);
-  margin:20px auto;
-  padding:5px 15px;
+  margin:6px auto;
+  padding:2px 15px;
+}
+
+.todoItem:nth-of-type(odd){
+  background-color: rgb(33, 4, 44);
+}
+
+.todoItem:nth-of-type(even){
+  background-color: rgb(87, 2, 104);
 }
 
 .chkbox{
